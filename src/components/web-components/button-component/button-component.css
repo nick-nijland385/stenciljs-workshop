@@ -1,0 +1,19 @@
+button {
+  display: block;
+  padding: 10px 15px;
+  width: 100%;
+  cursor: pointer;
+  border: none;
+}
+
+/* button.primary,
+.button_primary {
+  background: lightcoral;
+  color: white;
+}
+
+.button_secondary {
+  background: lightblue;
+  color: gray
+}
+ */

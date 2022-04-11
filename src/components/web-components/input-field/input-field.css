@@ -1,0 +1,48 @@
+input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15px;
+  background: #f9f9f9;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  margin-bottom: 5px;
+}
+
+input.invalid {
+  
+}
+
+input.valid {
+  border-color: green;
+  color: green;
+  
+}
+
+div {
+  /* background: red; */
+}
+
+span.invalid {
+  color: red;
+}
+
+span.valid {
+  color: green;
+}
+
+
+/* .invalid {
+  display: block;
+  width: 100%;
+  border: 1px solid red;
+  color: red;
+  box-sizing: border-box;
+}
+
+.valid {
+  display: block;
+  width: 100%;
+  border: 1px solid green;
+  color: green;
+  box-sizing: border-box;
+} */
