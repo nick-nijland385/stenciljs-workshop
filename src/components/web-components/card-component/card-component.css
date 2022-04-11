@@ -1,22 +1,40 @@
+:host {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+a {
+  font-size: 1rem;
+  color: #bbb;
+  display: block;
+  margin-top: 1rem;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 .card {
-  padding: 15px;
-  border: 1px solid black;
+  padding: 1.5rem;
+  border: 4px dashed #aaa;
   display: block;
   margin-bottom: 15px;
   border-radius: 3px;
+  width: 100%;
 }
 
 .lds-dual-ring {
   display: inline-block;
-  width: 80px;
-  height: 80px;
+  width: 20px;
+  height: 20px;
 }
 .lds-dual-ring:after {
-  content: " ";
+  content: "";
   display: block;
   width: 20px;
   height: 20px;
-  margin: 5px;
   border-radius: 50%;
   border: 3px solid black;
   border-color: black transparent black transparent;
@@ -36,5 +54,6 @@ a {
 }
 
 .removeable {
+  border: 4px dashed #ddd;
   opacity: .5;
 }

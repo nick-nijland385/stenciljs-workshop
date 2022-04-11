@@ -61,13 +61,13 @@ export class MyComponent {
           }
         </form >
         {this.todos.length > 0 &&
-          <h3>Todo:</h3>
+          <h3>Te doen</h3>
         }
         {this.todos.map((todo, index) =>
           <card-component item={todo} index={index} removeable={true} />
         )}
         {this.todosDone.length > 0 &&
-          <h3>Done:</h3>
+          <h3>Klaar ✓</h3>
         }
         {this.todosDone.map((todo, index) =>
           <card-component item={todo} index={index} />

@@ -8,7 +8,7 @@ import { Component, Host, h, Prop, State, Event, EventEmitter } from '@stencil/c
 export class InputField {
 
   @Prop() type: string = 'text';
-  @Prop() placeholder: string = 'Vul in...';
+  @Prop() placeholder: string = 'Voeg toe';
   @Prop({ mutable: true }) value: string;
 
   @State() inputValidated: boolean = false;
@@ -31,6 +31,12 @@ export class InputField {
   render() {
     return (
       <Host>
+        {!this.inputValidated &&
+          <span class="invalid">Vul meer dan 5 karakters in</span>
+        }
+        {this.inputValidated &&
+          <span class="valid">Input is akkoord!</span>
+        }
         <input
           placeholder={this.placeholder}
           type={this.type}
@@ -41,11 +47,8 @@ export class InputField {
             'valid': this.inputValidated
           }}
         />
-        {!this.inputValidated &&
-          <span class="invalid">Vul meer dan 5 karakters in</span>
-        }
         {this.inputValidated &&
-          <span class="valid">Input is akkoord!</span>
+          <span class="icon">✓</span>
         }
       </Host>
     );

@@ -1,35 +1,50 @@
+:host {
+  position: relative;
+}
+
 input {
   width: 100%;
   box-sizing: border-box;
-  padding: 15px;
+  padding: 1.5rem;
   background: #f9f9f9;
-  border: 1px solid lightgray;
+  border: none;
   border-radius: 3px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
   margin-bottom: 5px;
+  box-shadow: 0px 0px 25px 10px #E0E0E0;
 }
 
-input.invalid {
-  
+input.valid {
+  border: 1px solid green;
+}
+
+span {
+  margin-top: 2rem;
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 input.valid {
   border-color: green;
-  color: green;
-  
-}
-
-div {
-  /* background: red; */
-}
-
-span.invalid {
-  color: red;
+  color: green;  
 }
 
 span.valid {
   color: green;
 }
 
+span.icon {
+  position: absolute;
+  font-size: 1.5rem;
+  color: green;
+  right: 1.5rem;
+  bottom: 0;
+  margin-bottom: 0;
+
+}
 
 /* .invalid {
   display: block;

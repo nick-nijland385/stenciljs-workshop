@@ -1,19 +1,20 @@
 button {
-  display: block;
-  padding: 10px 15px;
-  width: 100%;
+  backface-visibility: hidden;
+  position: relative;
   cursor: pointer;
-  border: none;
+  display: block;
+  white-space: nowrap;
+  background: #72e655;
+  border-radius: 0px;
+  border: 0px solid #689a3a;
+  border-width: 0px 0px 4px 0px;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: initial;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 1.5rem;
+  width: 100%;
+  margin-top: 1rem;
 }
-
-/* button.primary,
-.button_primary {
-  background: lightcoral;
-  color: white;
-}
-
-.button_secondary {
-  background: lightblue;
-  color: gray
-}
- */
