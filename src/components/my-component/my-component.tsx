@@ -1,5 +1,6 @@
 import { Component, h, Host, Listen, State } from '@stencil/core';
 import { TodoItem } from '../../model/todo';
+import state from '../../store';
 
 @Component({
   tag: 'my-component',
@@ -31,6 +32,9 @@ export class MyComponent {
 
   @Listen('removeTodo')
   removeItemHandler(event: CustomEvent<number>) {
+    state.doneLength++;
+    state.todoLength--;
+
     this.todosDone.push(this.todos[event.detail]);
     this.todosDone = [
       ...this.todosDone
@@ -44,6 +48,7 @@ export class MyComponent {
   }
 
   addToDo(todo) {
+    state.todoLength++;
     this.todos.push(todo);
     this.todos = [
       ...this.todos
@@ -61,13 +66,13 @@ export class MyComponent {
           }
         </form >
         {this.todos.length > 0 &&
-          <h3>Te doen</h3>
+          <h3>Te doen ({state.todoLength})</h3>
         }
         {this.todos.map((todo, index) =>
           <card-component item={todo} index={index} removeable={true} />
         )}
         {this.todosDone.length > 0 &&
-          <h3>Klaar ✓</h3>
+          <h3>Klaar ✓ ({state.doneLength})</h3>
         }
         {this.todosDone.map((todo, index) =>
           <card-component item={todo} index={index} />
